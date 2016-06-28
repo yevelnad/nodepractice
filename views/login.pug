@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  p message: #{loginMessage}
+  p message: #{message}
   form(name="login", action="/login", method="post")
     input(type="text", name="username")
     input(type="text", name="password")

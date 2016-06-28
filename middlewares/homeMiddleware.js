@@ -2,7 +2,10 @@ var app = require('express');
 var router = app.Router();
 
 router.get('/', function(req, res, next){
-	res.render('index');
+	if (req.method == 'GET' ) {
+		res.send(req.method);
+	}
+	next();
 });
 
 module.exports = router;
