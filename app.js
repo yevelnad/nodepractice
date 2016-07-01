@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/routes');
 var restful = require('./routes/api-routes');
+var helmet = require('helmet');
 
 var app = express();
 var https = ('https');
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(helmet());
 app.use('/', routes);
 app.use('/api', restful);
 

@@ -6,6 +6,6 @@ router.route('/')
 	res.render('login');
 })
 .post(function (req, res, next){
-	res.json(req.body);
+	res.json(req.body.username);
 });
 module.exports = router;

@@ -3,18 +3,17 @@ html
   meta(name="viewport" content="width=device-width, initial-scale=1")
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    script(src="javascript/bootstrap.min.js")
-    script(src="javascript/vue.min.js")
-    nav(class='navbar navbar-default')
-      div(class="container-fluid")
-        div(class='navbar-header')
-          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
-            span(class='sr-only') Toggle navigation
-            span(class='icon-bar')
-            span(class='icon-bar')
-            span(class='icon-bar')
-          a(class='navbar-brand' href='/') Home
-          a(class='navbar-brand' href='/login') Login
+    link(rel="stylesheet" href="/stylesheets/normalize.css")
+    link(rel="stylesheet" href="/stylesheets/skeleton.css")
+    link(rel="stylesheet" href="/stylesheets/main.css")
+    script(src="/javascripts/vue.min.js")
+    nav(class='row')
+      ul(class="five columns")
+        li()
+          a(href="login") Login
+        li()
+          a(href="/") Home
+
+
   body
     block content
