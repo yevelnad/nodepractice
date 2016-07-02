@@ -4,15 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routes = require('./routes/routes');
-var restful = require('./routes/api-routes');
+var routes = require('./app/routes/routes');
+var restful = require('./app/routes/api-routes');
 var helmet = require('helmet');
 
 var app = express();
 var https = ('https');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/app/views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
