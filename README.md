@@ -2,7 +2,7 @@
 
 be sure you have node installed
 
-create a pull request
+git clone https://github.com/yevelnad/nodepractice.git
 
 just run
 
