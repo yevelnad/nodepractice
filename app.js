@@ -9,15 +9,16 @@ var routes = require('./app/routes/routes');
 var restful = require('./app/routes/api-routes');
 var helmet = require('helmet');
 var RedisStore = require('connect-redis')(session);
+var FileStore = require('session-file-store')(session);
 var app = express();
 var https = ('https');
 
 
 var sess = {
-  
-  secret: 'danlevey',
+  store: new FileStore,
+  secret: 'kdkdkdlskdkdkddklskskddlskdl',
   resave: true,
-  saveUninitialized:true,
+  saveUninitialized:false,
   cookie: {}
 }
 
