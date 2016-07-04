@@ -15,16 +15,12 @@ var https = ('https');
 
 var sess = {
   store:  new FileStore,
-  secret: 'keyboard cat',
+  secret: 'danlevey',
   resave: true,
   saveUninitialized:true,
   cookie: {}
 }
 
-if (app.get('env') === 'production') {
-  app.set('trust proxy', 1) // trust first proxy
-  sess.cookie.secure = true // serve secure cookies
-}
 // view engine setup
 app.set('views', path.join(__dirname, '/app/views'));
 app.set('view engine', 'pug');
