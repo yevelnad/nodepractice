@@ -13,6 +13,7 @@ var middleware = function(middleware){
 router.use('/',  controller('home'));
 router.use('/login', middleware('userIsAuthenticated'), controller('login'));
 router.use('/register', middleware('userIsAuthenticated'), controller('register'));
+router.use('/logout', middleware('auth'), controller('logout'));
 
 
 module.exports = router;
