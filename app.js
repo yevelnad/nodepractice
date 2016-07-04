@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./app/routes/routes');
 var restful = require('./app/routes/api-routes');
 var helmet = require('helmet');
+var compression = require('compression');
 var RedisStore = require('connect-redis')(session);
 var FileStore = require('session-file-store')(session);
 var app = express();
@@ -29,6 +30,8 @@ if (app.get('env') === 'production') {
 // view engine setup
 app.set('views', path.join(__dirname, '/app/views'));
 app.set('view engine', 'pug');
+app.set('view cache', true);
+app.use(compression());
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
