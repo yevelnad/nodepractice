@@ -18,7 +18,7 @@ var sess = {
   secret: 'danlevey',
   resave: true,
   saveUninitialized:true,
-  cookie: {}
+  cookie: {secure:true}
 }
 
 // view engine setup
