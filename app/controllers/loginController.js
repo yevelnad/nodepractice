@@ -10,7 +10,8 @@ router.route('/')
 		req.session.authenticated = true;
 		req.session.user = req.body.username;
 		res.redirect('/');
+		res.end();
 	}
-	res.send(req.session.authenticated)
+	res.redirect('/login');
 });
 module.exports = router;
