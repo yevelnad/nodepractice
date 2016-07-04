@@ -5,7 +5,7 @@ router.route('/')
 .get(function(req, res){
 	res.render('register');
 })
-.post(function(req, res){
+.post(function(req, res){ //
 	res.send();
 })
 module.exports = router;

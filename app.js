@@ -8,13 +8,16 @@ var bodyParser = require('body-parser');
 var routes = require('./app/routes/routes');
 var restful = require('./app/routes/api-routes');
 var helmet = require('helmet');
-
+var FileStore = require('session-file-store')(session);
 var app = express();
 var https = ('https');
 
 
 var sess = {
+  store:  new FileStore,
   secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized:true,
   cookie: {}
 }
 

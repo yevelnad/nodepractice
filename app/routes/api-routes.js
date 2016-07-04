@@ -7,9 +7,12 @@ var controller = function(controller){
 		return require('../controllers/'+controller+'Controller');
 	}
 var middleware = function(controller){
-	return require('../middleware/'+middleware+'Middleware');
+		return require('../middleware/'+middleware+'Middleware');
 }
-router.all('/', function(req, res, next){
+/*
+/ corresponds to route mysite.com/api/
+*/
+router.all('/user/search', function(req, res, next){
 
 });
 
