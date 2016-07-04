@@ -10,8 +10,9 @@ var middleware = function(middleware){
 		return require('../middlewares/'+middleware+'Middleware');
 	}
 
-router.use('/', middleware('home'), controller('home'));
+router.use('/', middleware('home'), middleware('auth'), controller('home'));
 router.use('/login', controller('login'));
+router.use('/register', controller('register'));
 
 
 module.exports = router;

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  p message: #{message}
+  form(name="login", action="/register", method="post")
+    input(type="text", name="username")
+    input(type="email" name="email")
+    input(type="text", name="password")
+    input(type="submit", name="register")

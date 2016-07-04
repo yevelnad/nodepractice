@@ -6,6 +6,11 @@ router.route('/')
 	res.render('login');
 })
 .post(function (req, res, next){
-	res.json(req.body.username);
+	if(req.body.username === 'dan' && req.body.password === 'dan' ){
+		req.session.authenticated = true;
+		req.session.user = req.body.username;
+		res.redirect('/');
+	}
+	res.send(req.session.authenticated)
 });
 module.exports = router;

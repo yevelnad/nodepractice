@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var routes = require('./app/routes/routes');
 var restful = require('./app/routes/api-routes');
@@ -11,6 +12,16 @@ var helmet = require('helmet');
 var app = express();
 var https = ('https');
 
+
+var sess = {
+  secret: 'keyboard cat',
+  cookie: {}
+}
+
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1) // trust first proxy
+  sess.cookie.secure = true // serve secure cookies
+}
 // view engine setup
 app.set('views', path.join(__dirname, '/app/views'));
 app.set('view engine', 'pug');
@@ -22,6 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(sess));
 app.use(helmet());
 app.use('/', routes);
 app.use('/api', restful);
