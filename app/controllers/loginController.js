@@ -1,18 +1,18 @@
 var app = require('express');
 var router = app.Router();
+var User = require('../Models/User.js')
 
 router.route('/')
 .get(function (req, res, next){
 	res.render('login');
 })
 .post(function (req, res, next){
-	if(req.body.username === 'dan' && req.body.password === 'dan' ){
+	if(User.auth(req.body.username, req.body.password)){
 		req.session.authenticated = true;
 		req.session.user = req.body.username;
-		res.redirect('/');
 	}
 	else{
-		res.redirect('/login');
+		res.redirect('/login',{message:"Inccorect Username or password"});
 	}
 });
 module.exports = router;
