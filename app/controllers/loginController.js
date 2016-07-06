@@ -10,9 +10,10 @@ router.route('/')
 	if(User.auth(req.body.username, req.body.password)){
 		req.session.authenticated = true;
 		req.session.user = req.body.username;
+		res.redirect('/');
 	}
 	else{
-		res.redirect('/login',{message:"Inccorect Username or password"});
+		res.redirect('/login');
 	}
 });
 module.exports = router;

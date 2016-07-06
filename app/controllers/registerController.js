@@ -10,7 +10,7 @@ router.route('/')
 })
 .post(function(req, res){ //
 	if(User.create(req.body.username, req.body.password)){
-		res.location('/register');
+		res.redirect('/login');
 	}
 	else{
 		res.redirect('/register');
