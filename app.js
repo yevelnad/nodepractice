@@ -12,7 +12,7 @@ var compression = require('compression');
 var RedisStore = require('connect-redis')(session);
 var FileStore = require('session-file-store')(session);
 var app = express();
-var https = ('https');
+var http = ('http');
 
 
 var sess = {
