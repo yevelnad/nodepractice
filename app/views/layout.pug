@@ -1,23 +1,16 @@
 doctype html
 html
-  meta(name="viewport" content="width=device-width, initial-scale=1")
   head
     title= title
-    link(rel="stylesheet" href="/stylesheets/normalize.css")
-    link(rel="stylesheet" href="/stylesheets/skeleton.css")
     link(rel="stylesheet" href="/stylesheets/main.css")
     script(src="/javascripts/vue.min.js")
-    nav(class='row')
-      ul(class="five columns")
-        li()
-          a(href="login") Login
-        li()
+    nav
+      ul
+        li
           a(href="/") Home
-        li()
-          a(href="/register") Register
-        li()
-          a(href="/logout") Logout
-
-
+        li
+          a(href="php") PHP
+        li
+          a(href="node") NodeJs
   body
     block content

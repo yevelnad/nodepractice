@@ -1,16 +1,58 @@
-nav{
-  background: black;
+@media (min-with: 320px) {
 
 }
-nav ul {
-
+@media (min-width: 720px) {
+  body{
+    background: rgba(0, 0, 0, 0.06);
+  }
+  nav {
+  	position: relative;
+    background: rgb(72, 34, 128);
+    padding: .3em;
+    margin: -10px;
+    box-shadow: 0px 0px 2px 0px black;
+  }
+  nav ul li{
+    display: inline-block;
+    padding: .3em;
+    width: 50px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .about{
+  	position: relative;
+  	background: rgb(72, 34, 127);
+    z-index: -1;
+    text-align: center;
+    margin: -10px;
+    text-shadow: 0px 0px 2px black;
+    padding-bottom: 2em;
+  }
+  .tutorial-form{
+  	width: 200px;
+  	height: 200px;
+  	background: white;
+  	box-shadow: 0px 0px 1px 0px black;
+  }
+  form.search-main input{
+  	box-shadow: inset 0px 0px 5px 0px black;
+  	padding: 5px;
+  	font-size: 3em;
+  	border-radius: 15px 0px 0px 15px;
+  	border: none;
+  }
+  .about-main{
+  	font-size: 5em;
+  	padding: 2em;
+  	padding-top: 1em;
+  	padding-bottom: 0em;
+  	color: white;
+  }
+  .foreach{
+  	font-family: monospace;
+  	font-size: 1.5em;
+  	padding: 1em;
+  }
 }
-nav ul li {
-  display: inline-block;
-  margin: .5em;
-}
-nav ul li a{
-  text-decoration: none;
-}
-31.13.95.36
-5EturuMU

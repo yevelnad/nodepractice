@@ -26,20 +26,20 @@ var sess = {
 if (app.get('env') === 'production') {
   app.set('trust proxy', 1) // trust first proxy
   sess.cookie.secure = true // serve secure cookies
+  app.set('view cache', true);
+  app.use(compression());
+
 }
 // view engine setup
 app.set('views', path.join(__dirname, '/app/views'));
 app.set('view engine', 'pug');
-app.set('view cache', true);
-app.use(compression());
-
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 app.use(helmet());
 app.use('/', routes);
