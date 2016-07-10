@@ -3,23 +3,27 @@
 }
 @media (min-width: 720px) {
   body{
-    background: rgba(0, 0, 0, 0.06);
+    background: rgb(221, 220, 223);
   }
   nav {
-  	position: relative;
-    background: rgb(72, 34, 128);
-    padding: .3em;
-    margin: -10px;
-    box-shadow: 0px 0px 2px 0px black;
+    position: fixed;
+    background: white;
+    box-shadow: inset 0px 0px 1px 0px black;
+  }
+  nav ul{
+    padding-right: 40px;
   }
   nav ul li{
     display: inline-block;
-    padding: .3em;
-    width: 50px;
+    padding: .5em;
   }
   nav ul li a{
     text-decoration: none;
-    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px gray;
+    font-family: sans-serif;
+    color: rgb(221, 220, 223);
   }
   .about{
   	position: relative;

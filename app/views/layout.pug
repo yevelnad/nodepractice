@@ -1,16 +1,20 @@
 doctype html
 html
+  meta( charset="utf-8" name="viewport" content="width=device-width, initial-scale=1z")
   head
     title= title
     link(rel="stylesheet" href="/stylesheets/main.css")
     script(src="/javascripts/vue.min.js")
-    nav
-      ul
-        li
-          a(href="/") Home
-        li
-          a(href="php") PHP
-        li
-          a(href="node") NodeJs
   body
+    div(class="site-name") <h1>Web Applications on the budget</h1>
+    div(class="nav")
+        nav
+          li
+            a(href="/") Home
+          li
+            a(href="node") NodeJs
+          li
+            a(href="php") Php
+          li
+            a(href="login") Login
     block content
