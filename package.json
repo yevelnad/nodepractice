@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "build": "browserify browserify/app.js -o public/javascripts/main.js"
+    "start": "node ./bin/www --websocket-port=$OPENSHIFT_NODEJS_PORT --log-level=1",
+    "install": "cd node_modules/iconv; node-gyp rebuild"
   },
+  "main": "./bin/www",
   "dependencies": {
     "async": "^2.0.0-rc.6",
     "body-parser": "~1.13.2",
