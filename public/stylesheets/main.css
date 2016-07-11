@@ -1,62 +1,91 @@
-@media (min-with: 320px) {
+@media (min-width: 320px) and (max-width: 480px) {
+  body, div{
+    display: block;
+    background: rgb(74, 27, 128);
+  }
+  .nav{
+    position: ;
+    background-color: rgb(75, 138, 212);
+  }
 
 }
 @media (min-width: 720px) {
-  body{
-    background: rgb(221, 220, 223);
-  }
-  nav {
+	body, div{
+		position: relative;
+		display: block;
+    background: rgba(240, 244, 234, 1);
+	}
+	.nav{
     position: fixed;
-    background: white;
-    box-shadow: inset 0px 0px 1px 0px black;
-  }
-  nav ul{
-    padding-right: 40px;
-  }
-  nav ul li{
-    display: inline-block;
-    padding: .5em;
-  }
-  nav ul li a{
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    text-shadow: 0px 0px 1px gray;
-    font-family: sans-serif;
-    color: rgb(221, 220, 223);
-  }
-  .about{
-  	position: relative;
-  	background: rgb(72, 34, 127);
-    z-index: -1;
+    background: none;
+	}
+  .nav nav li{
+    padding: 20px;
+    width: 5%;
+    position: relative;
     text-align: center;
-    margin: -10px;
-    text-shadow: 0px 0px 2px black;
-    padding-bottom: 2em;
+    display: block;
   }
-  .tutorial-form{
-  	width: 200px;
-  	height: 200px;
-  	background: white;
-  	box-shadow: 0px 0px 1px 0px black;
+  .nav nav li a{
+    text-decoration: none;
+    position: relative;
+    background: ;
+    color: rgb(79, 79, 79);
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: arial;
   }
-  form.search-main input{
-  	box-shadow: inset 0px 0px 5px 0px black;
-  	padding: 5px;
-  	font-size: 3em;
-  	border-radius: 15px 0px 0px 15px;
-  	border: none;
+  .content{
+    position: relative;
+    margin-left: 15%;
+    width: 60%;
+    padding: 5%;
+    background: white;
+    margin-top: 100px;
   }
-  .about-main{
-  	font-size: 5em;
-  	padding: 2em;
-  	padding-top: 1em;
-  	padding-bottom: 0em;
-  	color: white;
+  .welcome{
+    margin-left: 20%;
+    margin-top: 50px;
+    font-size: 5em;
+    font-weight: 700;
+    color: rgb(79, 79, 79);
+    width: 60%;
+    text-align: center;
   }
-  .foreach{
-  	font-family: monospace;
-  	font-size: 1.5em;
-  	padding: 1em;
+  .latest{
+    position: relative;
+    background: white;
+    margin-top: 50px;
+    margin-left: 15%;
+    width: 70%;
+    box-shadow: inset 0px 0px 2px 0px black;
+    padding: 20px;
+  }
+  .latest-title{
+    box-shadow: 0px 0px 2px 0px black;
+    font-size: 2em;
+    font-family: monospace;
+    color: rgb(79, 79, 79);
+    padding: 20px;
+  }
+  .latest-content{
+    margin-top: 50px;
+    background: none;
+  }
+  .latest-block{
+    display: inline-block;
+    margin: 1.5%;
+    width: 30%;
+    height: 250px;
+    border: 1px solid black;
+  }
+  .latest-block:hover{
+    display: inline-block;
+    background: white;
+    margin: 1.5%;
+    width: 30%;
+    height: 250px;
+    box-shadow: 0px 0px 1px 0px black;
   }
 }
